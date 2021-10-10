@@ -54,7 +54,7 @@ window.onload = function(){
         //Add an X or O to a square when clicked & update the board array with the appropriate value in the clicked location
         squares[x].addEventListener('click', function(){
 
-            if(num_clicks%2==0 && squares[x].innerHTML=="" && status_of_game=='no winner'){
+            if(num_clicks%2==1 && squares[x].innerHTML=="" && status_of_game=='no winner'){
 
                 squares[x].setAttribute("class","square X");
                 squares[x].innerHTML="X";
@@ -68,7 +68,7 @@ window.onload = function(){
                     document.getElementById("status").classList.add("you-won");
                 }
             }
-            if(num_clicks%2==1 && squares[x].innerHTML=="" && status_of_game=='no winner'){
+            if(num_clicks%2==0 && squares[x].innerHTML=="" && status_of_game=='no winner'){
 
                 squares[x].setAttribute("class","square O");
                 squares[x].innerHTML="O";

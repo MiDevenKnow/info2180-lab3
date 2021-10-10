@@ -12,6 +12,8 @@ window.onload = function(){
     ];
 
     var status_of_game = 'no winner';
+    
+    var new_game = document.getElementsByClassName("btn");
 
     function findWinner(){
         for(let x=0; x < 8; x++){
@@ -82,4 +84,9 @@ window.onload = function(){
             }
         });
     }
+
+    //If new game is clicked, reset board
+    new_game[0].addEventListener('click', function(){
+        location.reload();
+    });
 }
